@@ -15,9 +15,9 @@
         <td th:text="${user.name}"></td>
         <td th:text="${user.email}"></td>
         <td th:text="${user.userRole}"></td>
+        <td><a th:href="@{/user/edit/{userId}(userId=${user.userId})}">Edit</a></td>
     </tr>
 </table>
-
 <a th:href="@{/user/register}">Register a user</a>
 </body>
 </html>

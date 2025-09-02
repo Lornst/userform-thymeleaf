@@ -13,6 +13,7 @@ public class User {
         this.userRole = userRole;
     }
 
+    //Tom constructor til objekt kald uden argumenter
     public User(){}
 
     public int getUserId() {

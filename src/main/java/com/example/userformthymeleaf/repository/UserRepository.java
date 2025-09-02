@@ -27,4 +27,27 @@ public class UserRepository {
     }
 
 
+    public User getUserById(int userId) {
+        for(User tempUser: users){
+            if(tempUser.getUserId() == userId){
+                return tempUser;
+            }
+        }
+
+        return null;
+    }
+
+    public User updateUser(User user) {
+        User tempUser = getUserById(user.getUserId());
+
+        if(tempUser != null){
+            tempUser.setName(user.getName());
+            tempUser.setEmail(user.getEmail());
+            tempUser.setUserRole(user.getUserRole());
+
+            return tempUser;
+        }
+
+        return null;
+    }
 }
